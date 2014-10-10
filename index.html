@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>x2sql</title>
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+	<style type="text/css">
+		.inner.cover, .mastfoot{
+			margin-top: 15rem;
+		}
+		.mastfoot{
+			position: relative!important;
+		}
+
+		.madeWith{
+			font-size: 0.4rem;
+			background: none!important;
+			border: none;
+			border-radius: 0;
+			color: #979797;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="http://getbootstrap.com/examples/cover/cover.css">
+</head>
+
+
+
+
+<body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">x2sql</h3>
+<!--               <ul class="nav masthead-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul> -->
+            </div>
+          </div>
+
+          <div class="inner cover">
+
+          		
+	
+	
+
+
+
+
+            <h1 class="cover-heading">Convert your * into a SQL query</h1>
+            <p class="lead">Paste your code and get the SQL query.</p>
+            <p>
+            	<pre>
+            		<textarea id="codeInput" class="form-control" cols="32" rows="12"></textarea>
+            	</pre>
+            </p>
+            <p class="lead">
+              <button class="btn btn-lg btn-default" onClick="x2sql()">Go!</button>
+            </p>
+            <p>
+            	<div class="result" id="result"></div>
+            </p>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+        <p>Made with
+          <pre class=" text-center madeWith">
+     _.-._         _.-._      
+   | | | |_     _| | | |   
+   | | | | |   | | | | |   
+ _ | | | | |   | | | | | _ 
+\ \  '-._  |   | _.-'  |/ /
+ \`\`-.'-._;   ;_.-',-'/`/ 
+  \    '   |   |   '    /  
+   \  .'  /     \  '.  /   
+    |    |       |    |    
+          </pre>
+        </p> by <a href="http://twitter.com/UnJavaScripter">@UnJavaScripter</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+	<script>
+		var codeInput = document.getElementById("codeInput");
+		var result = document.getElementById("result");
+		function x2sql() {
+			var inputValue = codeInput.value;
+			var allTheLines = inputValue.split("\n");
+			
+			// ...
+      var resultArr = [];
+      
+      var lines = [];
+      var resultLines = [];
+
+      for(aLine in allTheLines){
+        lines[aLine] = allTheLines[aLine].split(" ");
+        resultLines[aLine] = [];
+      }
+      
+
+      for(line in lines){
+        for(str in lines[line]){
+          if(lines[line][str] === "public"){ // [str]  o [0] ???
+            resultLines[line][0] = "INSERT";
+          }else if(lines[line][str] === "algoMás---"){
+            resultLines[line][0] = "OTRA COSA CON BASE EN EL PRIMER STR";
+          }else{
+            resultLines[line][0] = "Else";
+          }
+          // ...
+        }
+      }
+
+
+      console.log(resultLines);
+
+      // ...
+      
+			var result = resultArr.join("\n")
+			result.innerText = "result goes here";
+		}
+	</script>
+
+  </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
