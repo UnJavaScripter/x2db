@@ -2,26 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>x2sql</title>
+	<title>x2db</title>
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-	
-	<style type="text/css">
-		.inner.cover, .mastfoot{
-			margin-top: 15rem;
-		}
-		.mastfoot{
-			position: relative!important;
-		}
-
-		.madeWith{
-			font-size: 0.4rem;
-			background: none!important;
-			border: none;
-			border-radius: 0;
-			color: #979797;
-		}
-	</style>
 	<link rel="stylesheet" type="text/css" href="http://getbootstrap.com/examples/cover/cover.css">
+  <link rel="stylesheet" type="text/css" href="./main.css">
 </head>
 
 
@@ -37,7 +21,7 @@
 
           <div class="masthead clearfix">
             <div class="inner">
-              <h3 class="masthead-brand">x2sql</h3>
+              <h3 class="masthead-brand">x2db</h3>
 <!--               <ul class="nav masthead-nav">
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="#">Features</a></li>
@@ -48,21 +32,22 @@
 
           <div class="inner cover">
 
-            <h1 class="cover-heading">Convert your * into a SQL query</h1>
-            <p class="lead">Paste your code and get the SQL query.</p>
+            <h1 class="cover-heading">Convert your Class into a DB query</h1>
+            <p class="lead">Paste your code and get the DB query.</p>
             <p>
             	<pre>
             		<textarea id="codeInput" class="form-control" cols="32" rows="12">
 public int Id {get; set;}
-public string Name {get; set;}
-            		</textarea>
+public string Name {get; set;}</textarea>
             	</pre>
             </p>
             <p class="lead">
-              <button class="btn btn-lg btn-default" onClick="x2sql()">Go!</button>
+              <button class="btn btn-lg btn-default" onClick="x2db()">Go!</button>
             </p>
             <p>
-            	<div class="result" id="result"></div>
+              <pre>
+            	 <div class="result" id="result"></div>
+              </pre>
             </p>
           </div>
 

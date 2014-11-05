@@ -1,11 +1,10 @@
 var codeInput = document.getElementById("codeInput");
 var result = document.getElementById("result");
-function x2sql() {
+function x2db() {
 	var inputValue = codeInput.value;
 	var allTheLines = inputValue.split("\n");
 
 	// ...
-	var resultArr = [];
 
 	var lines = [];
 	var resultLines = [];
@@ -14,19 +13,25 @@ function x2sql() {
 		lines[aLine] = allTheLines[aLine].split(" ");
 		resultLines[aLine] = [];
 	}
-  
 
-  for(line in lines){
-      if(lines[line][0] === "public"){
-        resultLines[line][0] = lines[line][2] + " " + findDataType(lines[line][1]);
-        if (lines[line][1].indexOf('?') === -1){
-        	resultLines[line][0] += " not null,";
+  for(var i = 0 ; i < lines.length ; i++){
+      if(lines[i][0] === "public"){
+        resultLines[i][0] = lines[i][2] + " " + findDataType(lines[i][1]);
+        if (lines[i][1].indexOf('?') === -1){
+            if( (i+1) == lines.length){
+        	   resultLines[i][0] += " not null";
+            }else{
+                resultLines[i][0] += " not null,";
+            }
         }
         else{
-        	resultLines[line][0] += ",";
+
+            resultLines[i][0] += ",";    
+
+        	
     	}
       }else{
-        resultLines[line][0] = "Else" + lines[line][0];
+        resultLines[i][0] = "" + lines[i][0];
       }
 
   }
@@ -37,8 +42,8 @@ function x2sql() {
 
 	// ...
 
-	var result = resultArr.join("\n")
-	result.innerText = "result goes here";
+	var resultStr = resultLines.join("\n")
+	result.innerText = resultStr;
 }
 
 function findDataType(dataType){

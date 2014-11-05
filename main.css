@@ -1,0 +1,19 @@
+.inner.cover, .mastfoot{
+    margin-top: 15rem;
+}
+.mastfoot{
+    position: relative!important;
+}
+
+.madeWith{
+    font-size: 0.4rem;
+    background: none!important;
+    border: none;
+    border-radius: 0;
+    color: #979797;
+}
+.result{
+    text-align: left;
+    color: black;
+    text-shadow: none;
+}
