@@ -43,7 +43,7 @@ function x2db() {
 	// ...
 
 	var resultStr = resultLines.join("\n")
-	result.innerText = resultStr;
+	result.innerText = resultStr
 }
 
 function findDataType(dataType){
@@ -56,14 +56,14 @@ function findDataType(dataType){
 
 var datatypes = [
 		{'languageType':'string', 'databaseType': 'nvarchar(max)'},
-		{'languagetype':'Byte', 'databaseType': 'tinyint'},
-		{'languagetype':'short', 'databaseType': 'smallint'},
+		{'languageType':'Byte', 'databaseType': 'tinyint'},
+		{'languageType':'short', 'databaseType': 'smallint'},
 		{'languageType':'int', 'databaseType': 'int'},
-		{'languagetype':'Int64', 'databaseType': 'bigint'},
-		{'languagetype':'bool', 'databaseType': 'bit'},
-		{'languagetype':'float', 'databaseType': 'real'},
-		{'languagetype':'double', 'databaseType': 'float'},
-		{'languagetype':'DateTime', 'databaseType': 'datetime'},
-		{'languagetype':'TimeSpan', 'databaseType': 'time'},
-		{'languagetype':'Guid', 'databaseType': 'uniqueidentifier'}
+		{'languageType':'Int64', 'databaseType': 'bigint'},
+		{'languageType':'bool', 'databaseType': 'bit'},
+		{'languageType':'float', 'databaseType': 'real'},
+		{'languageType':'double', 'databaseType': 'float'},
+		{'languageType':'DateTime', 'databaseType': 'datetime'},
+		{'languageType':'TimeSpan', 'databaseType': 'time'},
+		{'languageType':'Guid', 'databaseType': 'uniqueidentifier'}
 		];
