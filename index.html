@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>x2db</title>
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="./main.css">
+  <link rel="stylesheet" type="text/css" href="./css/main.css">
 </head>
 
 
@@ -14,16 +14,22 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-xs-12 header">
-        <h1 class="cover-heading">Convert your Class into a DB query</h1>
-        <p class="lead">Paste your code and get the DB query.</p>
+        <div class="col-xs-11">
+          <h1 class="cover-heading">Convert your Class into a DB query</h1>
+          <p class="lead">Paste your code and get the DB query.</p>
+        </div>
+        <div class="col-xs-1">
+          <h2>x2db</h2>
+        </div>
       </div>
     </div>
+    
     <div class="row textAreas">
 
       <div class="leftSide">
         <label for="codeInput">Your code</label>
       	<pre>
-<textarea id="codeInput" class="form-control" cols="32" rows="12">public int Id {get; set;}
+<textarea id="codeInput" class="form-control" cols="32" rows="12" onFocus="focus_blur(this)" onBlur="focus_blur(this)">public int Id {get; set;}
 public string Name {get; set;}</textarea>
         	</pre>
       </div>
@@ -31,7 +37,7 @@ public string Name {get; set;}</textarea>
       <div class="rightSide">
         <label for="result">Your query</label>
         <pre>
-<textarea id="result" class="result form-control" cols="32" rows="12"></textarea>
+<textarea id="result" class="result form-control" cols="32" rows="12" onFocus="focus_blur(this)" onBlur="focus_blur(this)"></textarea>
         </pre>
       </div>
 
@@ -39,7 +45,7 @@ public string Name {get; set;}</textarea>
 
     <div class="row">
       <div class="col-xs-offset-5 col-xs-2">
-        <button class="btn btn-lg btn-default btn-block" onClick="x2db()">Go!</button>
+        <button class="btn btn-lg btn-default btn-block goBtn" onClick="x2db()">Go!</button>
       </div>
     </div>
 
@@ -60,8 +66,8 @@ public string Name {get; set;}</textarea>
         |    |       |    |    
             </pre>
           </p>
-          <p>by <b><a href="http://twitter.com/UnJavaScripter">@UnJavaScripter</a></b></p>
-          <p>and <b><a href="http://twitter.com/oaamados">@oaamados</a></b></p>
+          <p>by <a href="http://twitter.com/UnJavaScripter">@UnJavaScripter</a></p>
+          <p>and <a href="http://twitter.com/oaamados">@oaamados</a></p>
         </div>
 
       </div>
@@ -69,7 +75,7 @@ public string Name {get; set;}</textarea>
   </div> <!-- /.container-fluid -->
 
   <!-- -<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>- -->
-	<script src="main.js"></script>
+	<script src="./js/main.js"></script>
 
 </body>
 </html>

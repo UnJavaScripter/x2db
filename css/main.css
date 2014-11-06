@@ -1,0 +1,112 @@
+@font-face {
+  font-family: 'ClearSans';
+  src: url('../fonts/ClearSans-light.woff') format('woff'),
+       url('../fonts/ClearSans-light.ttf') format('truetype');
+}
+
+body{
+    font-family: "ClearSans", "arial", sans-serif;
+}
+
+pre{
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    background: none;
+    border: none;
+}
+
+textarea{
+    width: 90%!important;
+    display: inline-block!important;
+    border-radius: 0!important;
+    border: none;
+    border: 3px dashed #646464!important;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+*:focus {
+    outline: none!important;
+}
+
+
+.level5Shadow{
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22)!important;
+}
+
+
+
+
+
+.header{
+    background: #9b59b6;
+    background: url("../img/nebula-header.jpg");
+    color: #fff;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.9);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+
+.textAreas{
+    text-align: center!important;
+    margin-top: 8rem;
+    margin-bottom: 5rem;
+}
+
+.leftSide{
+    width: 48%;
+    padding: 0;
+    margin-left: 15px;
+    float: left;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.rightSide{
+    width: 48%;
+    padding: 0;
+    margin-right: 15px;
+    float: right;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.result{
+    text-align: left;
+    color: black;
+    text-shadow: none;
+}
+
+.goBtn{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border: none;
+}
+
+footer{
+    margin-top: 10rem;
+    background: #7E3D9B;
+    box-shadow: -1px -3px 3px rgba(0,0,0,0.12), -1px -2px 2px rgba(0,0,0,0.24);
+}
+
+footer a{
+    color: #ecf0f1;
+}
+
+footer a:hover{
+    color: #ccc;
+}
+
+.inner{
+    margin-top: 5rem;
+}
+.footerDiv{
+    position: relative!important;
+    text-align: center;
+    color: #fff;
+}
+
+.madeWith{
+    font-size: 0.4rem;
+    background: none!important;
+    border: none;
+    border-radius: 0;
+    color: #dedede;
+}
