@@ -85,18 +85,17 @@ textarea{
 
 }
 .rightSide-cover .icon{
-    border: 1px solid #BEBEBE!important;
+    
     border-radius: 50%!important;
     padding: 7rem;
-    color: #BEBEBE;
+    color: #AAA;
     font-size: 7rem;
-
     background: #fff!important;
     float: right!important;
-    
     padding: 10rem!important;
     margin-right: 15%!important;
     margin-top: -30rem!important;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 
