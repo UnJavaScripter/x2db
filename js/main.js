@@ -1,5 +1,7 @@
 var codeInput = document.getElementById("codeInput"),
 	result = document.getElementById("result"),
+	rightSide = document.getElementById("rightSide"),
+	rightSide_cover = document.getElementById("rightSide-cover"),
 	datatypes = [
 		{'languageType':'string', 'databaseType': 'nvarchar(max)'},
 		{'languageType':'Byte', 'databaseType': 'tinyint'},
@@ -22,6 +24,9 @@ var codeInput = document.getElementById("codeInput"),
 	};
 
 function x2db() {
+	rightSide.classList.remove('hideIt');
+	rightSide_cover.classList.add('hideIt');
+
 	var inputValue = codeInput.value,
 		allTheLines = inputValue.split("\n"),
 		lines = [],

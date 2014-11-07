@@ -5,6 +5,7 @@
 	<title>x2db</title>
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="./css/main.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 
@@ -26,7 +27,7 @@
     
     <div class="row textAreas">
 
-      <div class="leftSide">
+      <div class="leftSide stuffContainer">
         <label for="codeInput">Your code</label>
       	<pre>
 <textarea id="codeInput" class="form-control" cols="32" rows="12" onFocus="focus_blur(this)" onBlur="focus_blur(this)">public int Id {get; set;}
@@ -34,12 +35,13 @@ public string Name {get; set;}</textarea>
         	</pre>
       </div>
 
-      <div class="rightSide">
+      <div id="rightSide" class="rightSide stuffContainer hideIt">
         <label for="result">Your query</label>
         <pre>
 <textarea id="result" class="result form-control" cols="32" rows="12" onFocus="focus_blur(this)" onBlur="focus_blur(this)"></textarea>
         </pre>
       </div>
+      <div id="rightSide-cover" class="rightSide-cover"><span class="fa fa-database icon"></span></div>
 
     </div>
 

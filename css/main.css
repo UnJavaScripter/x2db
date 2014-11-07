@@ -39,18 +39,25 @@ textarea{
 
 
 .header{
-    background: #9b59b6;
-    background: url("../img/nebula-header.jpg");
+    background: #3D7DE7;
     color: #fff;
-    text-shadow: 2px 2px 2px rgba(0,0,0,0.9);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    height: 40rem;
+    position: absolute;
+    float: initial;
+    /*box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);*/
 }
 
 
 .textAreas{
     text-align: center!important;
     margin-top: 8rem;
-    margin-bottom: 5rem;
+    margin-bottom: 15rem;
+    position: relative;
+    margin-top: 25rem;
+}
+
+.stuffContainer{
+    background: #fff;
 }
 
 .leftSide{
@@ -67,7 +74,31 @@ textarea{
     margin-right: 15px;
     float: right;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    visibility: visible;
 }
+
+.hideIt{
+    visibility: hidden;
+}
+
+.rightSide-cover{
+
+}
+.rightSide-cover .icon{
+    border: 1px solid #BEBEBE!important;
+    border-radius: 50%!important;
+    padding: 7rem;
+    color: #BEBEBE;
+    font-size: 7rem;
+
+    background: #fff!important;
+    float: right!important;
+    
+    padding: 10rem!important;
+    margin-right: 15%!important;
+    margin-top: -30rem!important;
+}
+
 
 .result{
     text-align: left;
@@ -82,8 +113,11 @@ textarea{
 
 footer{
     margin-top: 10rem;
-    background: #7E3D9B;
+    background: #202532;
     box-shadow: -1px -3px 3px rgba(0,0,0,0.12), -1px -2px 2px rgba(0,0,0,0.24);
+}
+footer *{
+    color: #566172;
 }
 
 footer a{
