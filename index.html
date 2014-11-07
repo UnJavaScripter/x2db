@@ -15,26 +15,29 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-xs-12 header">
-        <div class="col-xs-11">
+        <div class="col-xs-10">
           <h1 class="cover-heading">Convert your Class into a DB query</h1>
           <p class="lead">Paste your code and get the DB query.</p>
         </div>
         <div class="col-xs-1">
-          <h2>x2db</h2>
+          <h2 class="">x2db</h2>
         </div>
       </div>
     </div>
     
     <div class="row textAreas">
+      <div class="col-xs-12">
 
+        <div class="col-sm-6 col-xs-12">
       <div class="leftSide stuffContainer">
         <label for="codeInput">Your code</label>
-      	<pre>
+        <pre>
 <textarea id="codeInput" class="form-control" cols="32" rows="12" onFocus="focus_blur(this)" onBlur="focus_blur(this)">public int Id {get; set;}
 public string Name {get; set;}</textarea>
-        	</pre>
+          </pre>
       </div>
-
+        </div>
+        <div class="col-sm-6 col-xs-12">
       <div id="rightSide" class="rightSide stuffContainer hideIt">
         <label for="result">Your query</label>
         <pre>
@@ -42,6 +45,12 @@ public string Name {get; set;}</textarea>
         </pre>
       </div>
       <div id="rightSide-cover" class="rightSide-cover"><span class="fa fa-database icon"></span></div>
+        </div>
+
+      </div>
+
+
+
 
     </div>
 
