@@ -1,0 +1,4 @@
+- Fix read line with tabs at the start
+- Functionality to update table (add columns)
+- Create tables for mongodb
+- Create tables for mysql
