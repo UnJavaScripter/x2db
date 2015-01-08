@@ -1,11 +1,14 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>x2db</title>
-	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <title>x2db</title>
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="./css/main.css">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  
+  
+  <link rel="import" href="./x2db.html">
 </head>
 
 
@@ -13,82 +16,7 @@
 
 <body>
 
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-12 header">
-        <a href="https://github.com/UnJavaScripter/x2db"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
-		<div class="col-xs-10">
-          <h1 class="cover-heading">Convert your Class into a DB query</h1>
-          <p class="lead">Paste your code and get the DB query.</p>
-        </div>
-        <div class="col-xs-1">
-          <h2 class="">x2db</h2>
-        </div>
-      </div>
-    </div>
-    
-    <div class="row textAreas">
-      <div class="col-xs-12">
-
-        <div class="col-sm-6 col-xs-12">
-      <div class="leftSide stuffContainer">
-        <label for="codeInput">Your code</label>
-        <pre>
-<textarea id="codeInput" class="form-control" cols="32" rows="12" onFocus="focus_blur(this)" onBlur="focus_blur(this)">public int Id {get; set;}
-public string Name {get; set;}</textarea>
-          </pre>
-      </div>
-        </div>
-        <div class="col-sm-6 col-xs-12">
-      <div id="rightSide" class="rightSide stuffContainer hideIt">
-        <label for="result">Your query</label>
-        <pre>
-<textarea id="result" class="result form-control" cols="32" rows="12" onFocus="focus_blur(this)" onBlur="focus_blur(this)"></textarea>
-        </pre>
-      </div>
-      <div id="rightSide-cover" class="rightSide-cover"><span class="fa fa-database icon"></span></div>
-        </div>
-
-      </div>
-
-
-
-
-    </div>
-
-    <div class="row">
-      <div class="col-xs-offset-5 col-xs-2">
-        <button class="btn btn-lg btn-default btn-block goBtn" onClick="x2db()">Go!</button>
-      </div>
-    </div>
-
-
-    <footer class="row">
-      <div class="col-xs-12 footerDiv">
-        <div class="inner">
-          <p>Made with
-            <pre class=" text-center madeWith">
-         _.-._         _.-._      
-       | | | |_     _| | | |   
-       | | | | |   | | | | |   
-     _ | | | | |   | | | | | _ 
-    \ \  '-._  |   | _.-'  |/ /
-     \`\`-.'-._;   ;_.-',-'/`/ 
-      \    '   |   |   '    /  
-       \  .'  /     \  '.  /   
-        |    |       |    |    
-            </pre>
-          </p>
-          <p>by <a href="http://twitter.com/UnJavaScripter">@UnJavaScripter</a></p>
-          <p>and <a href="http://twitter.com/oaamados">@oaamados</a></p>
-        </div>
-
-      </div>
-    </footer>
-  </div> <!-- /.container-fluid -->
-
-  <!-- -<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>- -->
-	<script src="./js/main.js"></script>
+<my-element></my-element>
 
 </body>
 </html>

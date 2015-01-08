@@ -1,0 +1,290 @@
+
+<link rel="import" href="bower_components/core-icon-button/core-icon-button.html">
+<link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
+<link rel="import" href="bower_components/core-header-panel/core-header-panel.html">
+<link rel="import" href="bower_components/core-icon/core-icon.html">
+
+<link rel="import" href="bower_components/core-pages/core-pages.html">
+
+<polymer-element name="my-element">
+
+  <template>
+    <style>    
+      :host {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+      }
+      .float-left {
+        float: left!important;
+      }
+      .float-right {
+        float: right!important;
+      }
+      #mainCard {
+        position: absolute;
+        width: 100%;
+        height: 300px;
+        border-radius: 2px;
+        left: 0px;
+        top: -4px;
+        background-color: #3D7DE7;
+      }
+      #leftCard {
+        width: 50%;
+        height: 300px;
+        border-radius: 2px;
+      }
+      #rightCard {
+        width: 50%;
+        height: 300px;
+        border-radius: 2px;
+      }
+      .card {
+        margin-top: 15rem;
+      }
+      @media screen and (max-width: 766px){
+        .cardsContainer {
+          flex-direction: column!important;
+        }
+        .card{
+          width: 100%!important;
+          padding-bottom: 50%;
+        }
+
+      }
+
+      pre {
+        margin: 0;
+        padding: 0;
+      }
+
+      .header {
+        position: absolute!important;
+        padding: 1rem;
+        color: white;
+      }
+
+      .header h1 {
+        padding-left: 2rem;
+        font-size: 36px;
+      }
+
+      .header h2 {
+        padding-left: 4rem;
+      }
+      
+      textarea{
+          margin: 5%;
+          width: 88%!important;
+          display: inline-block!important;
+          border-radius: 0!important;
+          border: none;
+          border: 3px dashed #646464!important;
+          box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+      }
+
+      footer{
+          margin-top: 0rem;
+          padding-bottom: 5rem;
+          background: #202532;
+          border-top: 1.5px solid #cacece;
+      }
+      .inner{
+          margin-top: 5rem;
+      }
+      .footerDiv{
+          position: relative!important;
+          text-align: center;
+          color: #fff;
+      }
+      .madeWith{
+          font-size: 0.4rem;
+          background: none!important;
+          border: none;
+          border-radius: 0;
+          color: #dedede;
+      }
+      footer *{
+          color: #566172;
+      }
+
+      footer a{
+          color: #ecf0f1;
+      }
+
+      footer a:hover{
+          color: #ccc;
+      }
+      /***********************/
+      .row{
+        width: 100%;
+        display: block;
+        margin: 0!important;
+        padding: 0!important;
+        position: relative!important;
+      }
+      .section-oneThird{
+        width: auto;
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+      @media (min-width: 790px) and (max-width: 2999px){
+        .row{
+          width: 100%;
+          display: inline-flex;
+          margin: 0!important;
+          padding: 0!important;
+          position: relative!important;
+        }
+       .section-oneThird{
+          width: 33.33%;
+          padding-right: 15px;
+          padding-left: 15px;
+        }
+      }
+      /************************/
+      .btn-go {
+        top: 50%;
+        position: relative;
+        left: 45%;
+        width: 10%;
+      }
+      @media (min-width: 790px) and (max-width: 2999px){
+        .btn-go {
+          position: absolute;
+        }
+      }
+      .redd {
+        background: red;
+      }
+
+    </style>
+<section id="section">
+<div class="row">
+  <div class="section-oneThird">
+<pre>
+<textarea id="codeInput" class="form-control" cols="32" rows="12" onFocus="focus_blur(this)" onBlur="focus_blur(this)">public int Id {get; set;}
+public string Name {get; set;}</textarea>
+</pre>
+  </div>
+  <div class="section-oneThird">
+    <button id="btn_go" class="btn-go">Go</button>
+  </div>
+  <div class="section-oneThird">
+<pre>
+<textarea id="result" cols="32" rows="12" onFocus="focus_blur(this)" onBlur="focus_blur(this)"></textarea>
+</pre>
+  </div>
+</div>
+</section>
+
+
+        <footer>
+          <div class="footerDiv">
+            <div class="inner">
+              <p>Made with
+                <pre class="madeWith">
+     _.-._         _.-._      
+   | | | |_     _| | | |   
+   | | | | |   | | | | |   
+ _ | | | | |   | | | | | _ 
+\ \  '-._  |   | _.-'  |/ /
+ \`\`-.'-._;   ;_.-',-'/`/ 
+  \    '   |   |   '    /  
+   \  .'  /     \  '.  /   
+    |    |       |    |    
+                </pre>
+              </p>
+              <span>by <a href="http://twitter.com/UnJavaScripter">@UnJavaScripter</a></span>
+              <span>and <a href="http://twitter.com/oaamados">@oaamados</a></span>
+            </div>
+
+          </div>
+        </footer>
+
+
+
+  </template>
+
+  <script>
+
+
+
+    Polymer({
+      ready: function(){
+        var codeInput = this.$.codeInput,
+          result =this.$.result,
+          btn_go = this.$.btn_go,
+          //rightSide = this.$.rightSide,
+          //rightSide_cover =  this.$.rightSide-cover,
+          datatypes = [
+            {'languageType':'string', 'databaseType': 'nvarchar(max)'},
+            {'languageType':'Byte', 'databaseType': 'tinyint'},
+            {'languageType':'short', 'databaseType': 'smallint'},
+            {'languageType':'int', 'databaseType': 'int'},
+            {'languageType':'Int64', 'databaseType': 'bigint'},
+            {'languageType':'bool', 'databaseType': 'bit'},
+            {'languageType':'float', 'databaseType': 'real'},
+            {'languageType':'double', 'databaseType': 'float'},
+            {'languageType':'DateTime', 'databaseType': 'datetime'},
+            {'languageType':'TimeSpan', 'databaseType': 'time'},
+            {'languageType':'Guid', 'databaseType': 'uniqueidentifier'}
+          ],
+          findDataType = function(dataType){
+            for(var i = 0; i < datatypes.length; i++) {
+               if(datatypes[i].languageType === dataType) {
+                 return datatypes[i].databaseType;
+               }
+            }
+          };
+
+        function x2db() {
+          //rightSide.classList.remove('hideIt');
+          //rightSide_cover.classList.add('hideIt');
+
+          var inputValue = codeInput.value,
+            allTheLines = inputValue.split("\n"),
+            lines = [],
+            resultLines = [];
+
+          for(aLine in allTheLines){
+            lines[aLine] = allTheLines[aLine].split(" ");
+            resultLines[aLine] = [];
+          }
+
+          for(var i = 0 ; i < lines.length ; i++){
+            if(lines[i][0] === "public"){
+              resultLines[i][0] = lines[i][2] + " " + findDataType(lines[i][1]);
+              if (lines[i][1].indexOf('?') === -1){
+                if( (i+1) == lines.length){
+                  resultLines[i][0] += " not null";
+                }else{
+                  resultLines[i][0] += " not null,";
+                }
+              }
+              else{
+                resultLines[i][0] += ",";    
+              }
+            }else{
+              resultLines[i][0] = "" + lines[i][0];
+            }
+          }
+          result.innerText = resultLines.join("\n");
+
+        };
+        function focus_blur(elem){
+          var this_pre = elem.parentNode;
+          var resultContainer = this_pre.parentNode;
+          resultContainer.classList.toggle('level5Shadow')
+        }
+        codeInput.addEventListener ("paste", x2db, false);
+        btn_go.addEventListener ("click", x2db, false);
+        
+      }
+    });
+
+  </script>
+
+</polymer-element>

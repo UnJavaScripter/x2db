@@ -1,0 +1,28 @@
+{
+  "name": "x2db",
+  "version": "0.3.0",
+  "homepage": "https://github.com/UnJavaScripter/x2db",
+  "authors": [
+    "Diego Coy <diegocoy@outlook.com>"
+  ],
+  "description": "Convert your code into a DB query",
+  "main": "index.html",
+  "keywords": [
+    "polymer",
+    "sql",
+    "query",
+    "generator"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5.1"
+  }
+}
